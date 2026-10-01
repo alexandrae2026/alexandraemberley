@@ -7,7 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,400;0,500;1,400&display=swap">
-<link rel="stylesheet" href="css/portfolio.css?v=4f45cef3">
+<link rel="stylesheet" href="css/portfolio.css?v=dd0a9f83">
 </head>
 <body>
 <header class="band masthead" style="--ground:#fcfcfa">
@@ -63,7 +63,7 @@
       <figure class="plate">
         <div class="plate-media">
         <div class="player">
-          <video class="film" src="media/creaturely-photonic-emergence.mp4" poster="media/creaturely-photonic-emergence-poster.jpg" width="960" height="540" playsinline preload="none" aria-label="photonic emergence: a poem in Python script whose letters gather into a seahorse."></video>
+          <video class="film" src="media/creaturely-photonic-emergence-excerpt.mp4" poster="media/creaturely-photonic-emergence-excerpt-poster.jpg" width="960" height="540" playsinline preload="none" aria-label="Excerpt from photonic emergence: the title, the first page of the code poem, and the seahorse morph."></video>
           <div class="player-controls">
             <button type="button" class="btn" data-act="play">Play</button>
             <input type="range" class="seek" min="0" max="1000" value="0" step="1" aria-label="Position in the film">
@@ -73,13 +73,13 @@
           </div>
         </div>
         </div>
-        <figcaption><i>photonic emergence</i>, 2026.</figcaption>
+        <figcaption><i>photonic emergence</i>, 2026. Excerpt, 1 min 26 s of 5 min 4 s: the title, the first page of the code poem, and the seahorse morph.</figcaption>
       </figure>
 
       <figure class="plate">
         <div class="plate-media">
         <div class="player">
-          <video class="film" src="media/creaturely-sonic-field.mp4" poster="media/creaturely-sonic-field-poster.jpg" width="960" height="540" playsinline preload="none" aria-label="sonic field: a poem in Python script whose letters gather into birds."></video>
+          <video class="film" src="media/creaturely-sonic-field-excerpt.mp4" poster="media/creaturely-sonic-field-excerpt-poster.jpg" width="960" height="540" playsinline preload="none" aria-label="Excerpt from sonic field: the title, the first page of the code poem, and the second bird morph."></video>
           <div class="player-controls">
             <button type="button" class="btn" data-act="play">Play</button>
             <input type="range" class="seek" min="0" max="1000" value="0" step="1" aria-label="Position in the film">
@@ -89,13 +89,13 @@
           </div>
         </div>
         </div>
-        <figcaption><i>sonic field</i>, 2026.</figcaption>
+        <figcaption><i>sonic field</i>, 2026. Excerpt, 1 min 9 s of 4 min 7 s: the title, the first page of the code poem, and the second bird morph.</figcaption>
       </figure>
 
       <figure class="plate">
         <div class="plate-media">
         <div class="player">
-          <video class="film" src="media/creaturely-filament.mp4" poster="media/creaturely-filament-poster.jpg" width="960" height="540" playsinline preload="none" aria-label="filament: a poem in Python script whose letters gather into moths and mycelium."></video>
+          <video class="film" src="media/creaturely-filament-excerpt.mp4" poster="media/creaturely-filament-excerpt-poster.jpg" width="960" height="540" playsinline preload="none" aria-label="Excerpt from filament: the title, the first page of the code poem, and the mycelium-to-moth morph."></video>
           <div class="player-controls">
             <button type="button" class="btn" data-act="play">Play</button>
             <input type="range" class="seek" min="0" max="1000" value="0" step="1" aria-label="Position in the film">
@@ -105,7 +105,7 @@
           </div>
         </div>
         </div>
-        <figcaption><i>filament</i>, 2026.</figcaption>
+        <figcaption><i>filament</i>, 2026. Excerpt, 1 min 23 s of 5 min 32 s: the title, the first page of the code poem, and the mycelium-to-moth morph.</figcaption>
       </figure>
 
       <figure class="plate">
@@ -220,8 +220,11 @@ document.querySelectorAll('.player').forEach(function (p) {
   seek.addEventListener('change', function () { dragging = false; });
   mute.addEventListener('click', function () { v.muted = !v.muted; mute.textContent = v.muted ? 'Sound on' : 'Mute'; });
   full.addEventListener('click', function () {
-    var el = v.requestFullscreen ? v : null;
-    if (el) { el.requestFullscreen().catch(function () {}); } else if (v.webkitEnterFullscreen) { v.webkitEnterFullscreen(); }
+    // full screen keeps this plain control row (the browser's own player would add its grey control bar)
+    if (document.fullscreenElement) { document.exitFullscreen(); return; }
+    if (p.requestFullscreen) { p.requestFullscreen().catch(function () {}); }
+    else if (p.webkitRequestFullscreen) { p.webkitRequestFullscreen(); }
+    else if (v.webkitEnterFullscreen) { v.webkitEnterFullscreen(); }  // iPhone only offers its own player
   });
 });
 </script>
