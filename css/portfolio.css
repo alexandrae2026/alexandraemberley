@@ -251,3 +251,18 @@ footer.close .inner { border-top: 1px solid color-mix(in srgb, var(--ink) 14%, t
 /* exhibition documentation after the list */
 .shows + .plate.doc, .plate.doc + .plate.doc { margin-top: clamp(28px, 4vw, 40px); }
 .plate.doc figcaption { font-size: 13px; }
+
+/* About: the petticoat scan behind the page, the text on a translucent paper panel */
+.petticoat { position: relative; min-height: 100vh; isolation: isolate; }
+.petticoat::before { content: ""; position: fixed; inset: 0; z-index: -1; background: #e9e8e2 url("../images/about-ground.jpg") center top / cover no-repeat; }
+.petticoat .band { background: transparent; }
+.petticoat .masthead .inner { background: transparent; }
+.petticoat .opener .inner, .petticoat .prose .inner, .petticoat .close .inner {
+  background: rgba(252, 252, 250, 0.78); padding-inline: clamp(20px, 4vw, 48px); }
+.petticoat .opener .inner { padding-top: clamp(28px, 4vw, 44px); border-radius: 2px 2px 0 0; }
+.petticoat .prose .inner { padding-bottom: clamp(36px, 5vw, 56px); border-radius: 0 0 2px 2px; }
+.petticoat .opener { padding-bottom: 0; }
+.petticoat .opener .inner { padding-bottom: clamp(20px, 3vw, 32px); }
+.petticoat .prose { padding-top: 0; }
+.petticoat .close { padding-top: clamp(28px, 4vw, 44px); }
+.petticoat .close .inner { padding-block: 20px; border-radius: 2px; }
