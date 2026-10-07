@@ -1,0 +1,12 @@
+Cephalopod Song upload
+
+1. Drag these five pages into the repo's top level, replacing the two that exist:
+   recent-work.html, work.html (replace)
+   cephalopod-song.html, cephalopod-song-reef.html, cephalopod-song-arctic.html (new)
+
+2. Drag the folder "cephalopod-song" into the top level (new folder, next to images and media).
+
+3. Open the folder "recent-new" and drag its four JPGs into  images/recent/  (alongside the cordyceps images).
+   Do not drag the folder itself; only its contents. Then delete the empty "recent-new" folder.
+
+Commit and push.
