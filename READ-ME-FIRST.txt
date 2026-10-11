@@ -1,8 +1,0 @@
-Main site: everything from 11 October in one upload
-
-1. Drag all the .html pages into the top level of the alexandraemberley repo, replacing the existing ones.
-
-2. Open "media-new" and drag its two files into the  media  folder, replacing the files of the same name.
-   Do not drag the folder itself. Then delete the empty "media-new" folder.
-
-Commit and push. You can ignore every earlier main-site zip.
