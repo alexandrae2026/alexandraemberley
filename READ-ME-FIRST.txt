@@ -1,12 +1,8 @@
-Cephalopod Song upload
+Main site: everything from 11 October in one upload
 
-1. Drag these five pages into the repo's top level, replacing the two that exist:
-   recent-work.html, work.html (replace)
-   cephalopod-song.html, cephalopod-song-reef.html, cephalopod-song-arctic.html (new)
+1. Drag all the .html pages into the top level of the alexandraemberley repo, replacing the existing ones.
 
-2. Drag the folder "cephalopod-song" into the top level (new folder, next to images and media).
+2. Open "media-new" and drag its two files into the  media  folder, replacing the files of the same name.
+   Do not drag the folder itself. Then delete the empty "media-new" folder.
 
-3. Open the folder "recent-new" and drag its four JPGs into  images/recent/  (alongside the cordyceps images).
-   Do not drag the folder itself; only its contents. Then delete the empty "recent-new" folder.
-
-Commit and push.
+Commit and push. You can ignore every earlier main-site zip.
